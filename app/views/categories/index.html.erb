@@ -1,4 +1,13 @@
-<div>
-  <h1 class="font-bold text-4xl">Categories#index</h1>
-  <p>Find me in app/views/categories/new.html.erb</p>
-</div>
+<header>
+  <div class="title">
+    <h1>Categories
+      <h1>
+      </div>
+      <% @categories.each do |categorie|%>
+        <img src= <%= categorie.icon%>>
+        <h1><%= categorie.name%></h1>
+      <% end%>
+      <div class="new-button">
+        <%= link_to "Add new category",new_category_path%>
+      </div>
+    </header>
