@@ -3,13 +3,15 @@
     <h1>Categories
       <h1>
       </div>
-      <% @categories.each do |categorie|%>
+      <% @categories.each do |category|%>
         <div class=" border-solid border-2 border-cyan-900 flex justify-center space-x-10 mx-10 m-20">
-          <img src=<%= categorie.icon%>>
-          <span class="text-[40px]"><%= categorie.name%></span>
+          <img src=<%= category.icon%>>
+          <span class="text-[40px]"><%= category.name%></span>
+          <div class="deleteCategory">
+            <%= button_to "Delete", category, method: :delete%>
+          </div>
+        <% end%>
+        <div class="mt-20 text-[30px] border-solid border-2 border-cyan-900 mx-5 hover:border-t-4">
+          <%= link_to "Add new category",new_category_path%>
         </div>
-      <% end%>
-      <div class="mt-20 text-[30px] border-solid border-2 border-cyan-900 mx-5 hover:border-t-4">
-        <%= link_to "Add new category",new_category_path%>
-      </div>
-    </header>
+      </header>
