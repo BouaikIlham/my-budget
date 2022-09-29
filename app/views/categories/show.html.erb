@@ -12,6 +12,9 @@
     <%= button_to "Delete", opertion, method: :delete, class:"text-[30px] mt-3 text-red-800"%>
   </div>
 <% end%>
+<% if @category.operations.empty? %>
+  <h1>There are no operations to show ! Try to Add one</h1>
+<% end %>
 <div class="mt-20 text-[30px] border-solid border-2 border-cyan-900 mx-5 hover:border-t-4">
   <%= link_to "Add new operation",new_operation_path%>
 </div>

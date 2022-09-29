@@ -2,6 +2,9 @@
   <div class="text-[50px] text-cyan-900	">
     <h1>Categories
       <h1>
+        <% if @categories.empty? %>
+          <h1>There are no categories to show ! Try to Add one</h1>
+        <% end %>
       </div>
       <% @categories.each do |category|%>
         <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
