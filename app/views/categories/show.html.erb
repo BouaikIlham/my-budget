@@ -1,0 +1,11 @@
+<h1><%= @category.name%></h1>
+<% @category.operations.each do |opertion|%>
+  <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
+    <h1><%= opertion.name%></h1>
+    <p><%= opertion.amount%></p>
+    <%= button_to "Delete", opertion, method: :delete, class:"text-[30px] mt-3 text-red-800"%>
+  </div>
+<% end%>
+<div class="mt-20 text-[30px] border-solid border-2 border-cyan-900 mx-5 hover:border-t-4">
+  <%= link_to "Add new operation",new_operation_path%>
+</div>

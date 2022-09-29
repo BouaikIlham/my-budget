@@ -6,8 +6,8 @@
       <% @categories.each do |category|%>
         <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
           <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0", src=<%= category.icon%>>
-          <span class="text-[40px]"><%= link_to "#{category.name}", operations_path%></span>
-          <h2 class="text-[20px] mt-2 text-lime-900">Total amount</h2>
+          <span class="text-[40px]"><%= link_to "#{category.name}", category%></span>
+          <h2 class="text-[20px] mt-2 text-lime-900">Total amount: <%= category.total_amount%></h2>
           <%= button_to "Delete", category, method: :delete, class:"text-[30px] mt-3 text-red-800"%>
         </div>
       <% end%>
