@@ -1,8 +1,14 @@
+<%= link_to categories_path do %>
+  <span class="material-symbols-outlined">
+    arrow_back
+  </span>
+<% end%>
 <h1><%= @category.name%></h1>
+<h2 class="text-[20px] mt-2 text-lime-900">Total amount: <%= @category.total_amount%></h2>
 <% @category.operations.each do |opertion|%>
   <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
     <h1><%= opertion.name%></h1>
-    <p><%= opertion.amount%></p>
+    <p><%= opertion.amount%> $ </p>
     <%= button_to "Delete", opertion, method: :delete, class:"text-[30px] mt-3 text-red-800"%>
   </div>
 <% end%>
