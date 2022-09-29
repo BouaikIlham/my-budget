@@ -1,5 +1,5 @@
 <header>
-  <div class="text-[50px] text-cyan-900	">
+  <div>
     <h1>Opertions
       <h1>
       </div>
@@ -7,7 +7,7 @@
         <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
           <h1><%= opertion.name%></h1>
           <p><%= opertion.amount%></p>
-          <%= button_to "Delete", opertion, method: :delete, class:"text-[30px] mt-3 text-red-800"%>
+          <%= button_to "Delete", opertion, method: :delete%>
         </div>
       <% end%>
     </div>
