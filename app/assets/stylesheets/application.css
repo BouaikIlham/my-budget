@@ -177,7 +177,7 @@ h1 {
   width: 9%;
   position: relative;
   left: 45%;
-  padding: 1.5%;
+  padding: 0.5%;
   border: none;
   text-decoration: none;
   text-align: center;
@@ -213,7 +213,6 @@ h1 {
   color: #eee6ce;
   background-color: #890f0d;
   cursor: pointer;
-  padding: 40%;
   border: none;
   border-radius: 6px;
 }
