@@ -352,3 +352,8 @@ h1 {
     font-size: 19px;
   }
 }
+
+.notice {
+  color: green;
+  font-size: x-large;
+}
