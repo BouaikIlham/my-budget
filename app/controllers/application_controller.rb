@@ -4,11 +4,12 @@ class ApplicationController < ActionController::Base
   # ...
 
   private
+
   def configure_devise_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 
-  def after_sign_in_path_for(resource_or_scope)
+  def after_sign_in_path_for(_resource_or_scope)
     categories_path
   end
 end
