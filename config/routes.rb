@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :categories
-  resources :transactions
+  resources :operations
   root "home#index"
 end
