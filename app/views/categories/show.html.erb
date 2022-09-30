@@ -1,0 +1,25 @@
+<%= render partial:"layouts/nav" ,locals: {title: 'Transactions'}%>
+<div>
+  <h1>Transactions</h1>
+</div>
+<div class="category-header">
+  <p><%= @category.name%></p>
+  <h2> $<%= @category.total_amount%></h2>
+</div>
+<% @category.operations.each do |opertion|%>
+  <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
+    <div class="ccontainer">
+      <h1><%= opertion.name%></h1>
+    </div>
+    <div class="brow">
+      <p class="text-[30px]"><%= opertion.amount%> $ </p>
+      <%= button_to "Delete", opertion, method: :delete, class:"text-[30px] mt-3 text-red-800"%>
+    </div>
+  </div>
+<% end%>
+<% if @category.operations.empty? %>
+  <h1 class="h1-mobile">You have no Transactions and new to continue</h1>
+<% end %>
+<div class= "Add-button">
+  <%= link_to "Add new operation",new_operation_path%>
+</div>
