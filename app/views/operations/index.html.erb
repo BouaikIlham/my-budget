@@ -3,11 +3,11 @@
     <h1>Opertions
       <h1>
       </div>
-      <% @operations.each do |opertion|%>
+      <% @operations.each do |operation|%>
         <div class=" border-solid border-2 border-cyan-900 flex justify-around space-x-10 mx-10 m-20">
-          <h1><%= opertion.name%></h1>
-          <p><%= opertion.amount%></p>
-          <%= button_to "Delete", opertion, method: :delete%>
+          <h1><%= operation.name%></h1>
+          <p><%= operation.amount%></p>
+          <%= button_to "Delete", operation, method: :delete%>
         </div>
       <% end%>
     </div>
