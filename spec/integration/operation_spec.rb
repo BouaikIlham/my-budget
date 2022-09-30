@@ -15,19 +15,17 @@ RSpec.describe 'Operations', type: :request do
     end
   end
 
-
   describe 'POST /create' do
     it 'creates an operation' do
-      post operations_path, params: {operation: {name: 'ilham', amount:'250',category_id: @category.id}}
+      post operations_path, params: { operation: { name: 'ilham', amount: '250', category_id: @category.id } }
       expect(response).to redirect_to(@category)
     end
   end
 
   describe 'POST /create' do
     it ' it does not creates an operation' do
-      post operations_path, params: {operation: {name: 'ilham',category_id: @category.id}}
+      post operations_path, params: { operation: { name: 'ilham', category_id: @category.id } }
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
-
 end
