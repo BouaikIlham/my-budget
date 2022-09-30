@@ -1,6 +1,6 @@
  require 'rails_helper'
 
- RSpec.describe 'Categories', type: :system do
+ RSpec.describe 'Operations', type: :system do
    include Devise::Test::IntegrationHelpers
    before do
      driven_by(:rack_test)
@@ -11,18 +11,12 @@
    end
 
    it 'should show correct operation ' do
-     visit category_path
+     visit operations_path
      expect(page).to have_content(@operation.name)
    end
 
    it 'should have the correct amount' do
-     visit category_path
+     visit operations_path
      expect(page).to have_content(@operation.amount)
-   end
-
-   it 'should redirect to add new transaction' do
-     visit category_path
-     click_on 'Add new operation'
-     expect(page).to have_current_path(new_operation_path)
    end
  end
