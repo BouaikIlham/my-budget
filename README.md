@@ -6,7 +6,7 @@
 
 ## Live demo:
 
-You can check out the live demo [here]().
+You can check out the live demo [here](https://nameless-anchorage-50346.herokuapp.com/categories).
 
 ## Entity Relationship Diagram
 
@@ -65,11 +65,10 @@ $ rspec
 ## Authors
 
 👤 **Ilham Bouaik**
+
 - GitHub : [@bouaik ilham](https://github.com/BouaikIlham)
 - Twitter: [@IlhamBouaik](https://twitter.com/IlhamBouaik)
 - LinkedIn: [@BouaikIlham](https://www.linkedin.com/in/bouaik-ilham-478478230/)
-
-
 
 ## Acknowledgment
 
